@@ -1,12 +1,12 @@
 points = 0;
 
 firstQuestion = prompt('Сколько будет 2+2?');
-if(isNaN(firstQuestion) || firstQuestion !=4 ){
+if(firstQuestion !="четыре" || firstQuestion !=4 ){
  	points += 0;
 } else {
 	points += 10;
 }
-
+console.log(points);
 secondQuestion = prompt('Солнце встает на востоке?');
 if(secondQuestion == 'да'){
  	points += 10;
