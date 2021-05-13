@@ -2,9 +2,11 @@
 /*do {
 a = +prompt('Input a:');
 } while (isNaN(a));
+
 do {
-	b = +prompt('Input b, bigger than a:');
+b = +prompt('Input b, bigger than a:');
 } while (a >= b || isNaN(b)) ;
+
 do {
 h = +prompt('Input h:');
 } while (isNaN(h));
@@ -17,12 +19,14 @@ sum = 0;
 
 while (a <= b) {
 	sum = sum + factorial(a);
-    a = a + h;
+    a += h;
 }
+
  alert(`Sum of factorials equal ${sum}`);
  */
 
  //v1.1
+ 
 do {
 a = +prompt('Input a:');
 } while (isNaN(a) || a<0);
