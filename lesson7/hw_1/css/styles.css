@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  font-family: "Quicksand", "Arial", sans-serif;
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  
+}
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+
+  
+ }
+.red {
+  background-color:red;
+}
+.orange {
+  background-color:orange;
+}
+.yellow {
+  background-color:yellow;
+}
+.green {
+  background-color:green;
+}
+.blue {
+   background-color:blue;
+}
+.indigo {
+   background-color:indigo;
+}
+.purple {
+   background-color:purple;
+}
+td {
+width: 150px;
+text-align: center;
+font-size: 30px;
+}
