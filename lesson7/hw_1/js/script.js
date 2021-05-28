@@ -12,6 +12,7 @@ rainbow.splice(6,0, rainbow[0]);
 rainbow.splice(0,1);
 rainbow.splice(6,1, "Vain");
 console.log(rainbow);
+/*
 document.write(`
 <div class="container">
   <div class="circle red"></div></td>
@@ -30,3 +31,18 @@ document.write(`
 		</table>
 		</div>
 `);
+*/
+
+colors = ['red','orange','yellow','green','blue','indigo','purple'];
+result = [];
+
+for(i=0; i<rainbow.length; i++){
+  result.push(`<div class="container" style="display: flex; flex-direction: column;">
+    <div class="circle" style="background-color: ${colors[i]}"></div>
+    <p align="center">${rainbow[i]}</p>
+  </div>`);
+}
+
+document.write(`<div class="container">${result.join('')}</div>`);
+
+
