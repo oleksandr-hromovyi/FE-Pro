@@ -24,5 +24,5 @@ function sum (a, b) {
 let resultWithFunction = main(5,5,function (с){return с ** 5});
 let resultWitoutFunction = main(5,5);
 
-console.log(`Результат функции аргумента c = ${resultWithFunction}`);
-console.log(`Результат функции sum = ${resultWitoutFunction}`);
+console.log(`Результат c функцией = ${resultWithFunction}`);
+console.log(`Результат без функции = ${resultWitoutFunction}`);
