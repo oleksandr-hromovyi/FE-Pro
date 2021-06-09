@@ -1,5 +1,3 @@
-
-const olympic = ['🔵','⚫','🔴','🟡','🟢'];
 const winners = [
 	['fencing','gold','fr'],
 	['fencing','silver','it'],
@@ -37,42 +35,11 @@ const winners = [
 	['handball','silver','fr'],
 	['handball','bronze','de'],
 ];
-
-/*let winnersResult = winners.map (
-	function(element,index,arr){
-		if (winners[2] == "gold")
-			return winners[2] = medals[i];
-	})
-console.log(winnersResult); */
-
 const medals = [
 	['🥇','gold'],
 	['🥈','silver'],
 	['🥉','bronze'],
 ];
-/*
-
-function getMedals (medal) {
-	for (i=0; i<winners.length; i++) {
-		console.log(winners[i][1]);
-	
-		
-	if (winners[i][1] == "gold") {
-		
-		
-		 winners[i][1] = medals[0][0];
-	}
-		return winners[i][1];
-}
-
-}
-
-result = getMedals (winners[2]);
-console.log(result);
-
-console.log(winners);*/
-
-
 
 
 const continents = [
@@ -92,12 +59,6 @@ const continents = [
 	['de','Europe']
 ];
 
-
-
-
-
-
-
 const flags = [
 	['fr','🇫🇷'],
 	['it','🇮🇹'],
@@ -116,11 +77,11 @@ const flags = [
 ];
 
 
-	
 
 
 
-
+const olympic = ['🔵','⚫','🔴','🟡','🟢'];
+ 
 const sports = [
 	['🤺','fencing'],
 	['⛸','figure skating'],
@@ -133,57 +94,97 @@ const sports = [
 	['🤾','handball']
 ];
 
-let iconSports = sports.map (
-	function (element){
-		return element[0];
+function getContinent (country) {
+	let winnerContinent = continents.filter(function(item){
+		return item[0] === country;
+	})
+		return winnerContinent[0][1];
+}
+
+function getMedal (medal) {
+	let currentMedal = medals.filter(function(item){
+		return item[1] === medal;
+	})
+	return currentMedal[0][0];
+}
+
+function getFlag (flag) {
+	let currentFlag = flags.filter(function(item){
+		return item[0] === flag;
+	})
+	return currentFlag[0][1];
+}
+
+let Ths = olympic
+		.map (function (item) {
+		return (`<th class="heading">${item}</th>`);
+
+
+});
+
+let Trs = sports
+    	.map(function (sport) {
+    		let Europe =[],
+    			Africa = [],
+    			Americas =[],
+    			Asia = [],
+    			Oceania = [];
+    			
+
+		let currentWinners = winners
+			.filter(function(winner){
+				return winner[0] === sport[1];
+			})
+			.map(function(winner){
+				winner.push(getContinent(winner[2]));
+				return winner;
+			})
+			.map(function(winner){
+				winner.push(`<div class="${winner[1]}">${getMedal(winner[1])} - ${getFlag(winner[2])}</div>`)
+				return winner; 
+			})
+			.forEach (function(winner){
+				let winnerContinent = winner[3];
+				switch(winnerContinent){
+						case "Europe":
+							Europe.push(winner[4]);
+							break;
+						case "Africa":
+							Africa.push(winner[4]);
+							break;
+						case "The Americas":
+							Americas.push(winner[4]);
+							break;
+						case "Asia":
+							Asia.push(winner[4]);
+							break;
+						case "Oceania":
+							Oceania.push(winner[4]);
+							break;
+				}
+			})
+
+		return `<tr>
+		<td class="sports">${sport[0]}</td>
+		<td class="results">${Europe.join("")}</div></td>
+		<td  class="results">${Africa.join("")}</td>
+		<td  class="results">${Americas.join("")}</td>
+		<td  class="results">${Asia.join("")}</td>
+		<td  class="results">${Oceania.join("")}</td>
+		</tr>`
 	})
 
-/*let sportsTD=[];
-for(let i=0; i<sports.length; i++) {
-	sportsTD[i] = sports[i][0];
-
-}
-
-document.write(`<table><tr><td>
-${sportsTD.join(`</td><td>`)};
-</td></tr></table>`)
-*/
-
-let trs=[];
-
-
- for(let i=0; i<=sports.length-1; i++){
- 	let tds=[];
-for(let j=0; j<olympic.length; j++){
-	td = `<td data-name=${i}${j}></td>`;
-	tds.push(td);
-
-
-	
-}
-tr = `<tr>
-<td>${iconSports[i]}</td>
-		${tds.join('')}</tr>`;
-trs.push(tr);
-
-}
-
-for(i=0, olympicArr=[]; i<olympic.length; i++){
-	olympicTD = `<td>${olympic[i]}</td>`;
-	olympicArr.push(olympicTD);
-}
-
-
-line = `<tr>
-	<td>
-	${olympicArr.join('')}
-	</td>
-</tr>`;
 
 document.write(`<table>
-	${line}
-	${trs.join('')}
-	</table>`);
-
+					<thead>
+						<tr>
+						<th class="heading"></th>
+						${Ths.join ("")}
+						</tr>
+					</thead>
+					<tbody>
+					${Trs.join ("")}
+					</tbody>
+					</table>`);
 
 
