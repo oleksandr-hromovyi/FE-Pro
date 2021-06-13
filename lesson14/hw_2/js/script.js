@@ -9,7 +9,7 @@ assignObjects({ x: 10 }, { x: 20, y: 30 }) - > { x:20, y: 30 } */
 let firstObj1 = { x: 10, y: 20 }
 let secondObj1 = { z: 30 }
 
-let firstObj2 = { x: 10, y: 20 }
+let firstObj2 = { x: 10 }
 let secondObj2 = { x: 20, y: 30 };
 
 function assignObjects(obj1, obj2) {
@@ -31,7 +31,7 @@ assignObjects(firstObj2, secondObj2);
 let firstObj1 = { x: 10, y: 20 }
 let secondObj1 = { z: 30 }
 
-let firstObj2 = { x: 10, y: 20 }
+let firstObj2 = { x: 10 }
 let secondObj2 = { x: 20, y: 30 };
 
 function assignObjects(obj1, obj2) {
