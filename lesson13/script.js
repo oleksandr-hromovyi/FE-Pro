@@ -74,9 +74,9 @@ let data = [
 function renderCards(data){ 
 	let cards = data.map(function(card){ 
 		
-			let cardTitle = card[0], // Project Brief, Brand Identity, Product Design, Marketing Website
-				cardTasks = card[1]; // Массив с тасками/задачами в карточке
-			let renderTasks = cardTasks.map(function(task, index){ // Массив задач
+			let cardTitle = card[0],
+				cardTasks = card[1]; 
+			let renderTasks = cardTasks.map(function(task, index){ 
 					
 				let typedCards = [];
 
