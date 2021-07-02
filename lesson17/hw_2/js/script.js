@@ -1,9 +1,22 @@
-function Product (category, type, price) {
-	this.category = category;
-console.log (category)
+function Product (products) {
+
+document.write(`<table border = "1">
+	<tr>
+	<th>Image</th>
+	<th>Name</th>
+	<th>Price</th></tr>`)
+products.forEach (function(value, index){
+
+	document.write(`<tr>
+	<td><img src="images/${products[index].option}/${products[index].type}.svg" alt="${products[index].type}" width="50" height="50"></td>
+	<td>${products[index].type}</td>
+	${Array.isArray(products[index].price) ? `<td>${products[index].price.join('-')} USD</td>` : `<td>${products[index].price} USD</td>`}
+</tr>`)
+
+}) 
+document.write(`</table>`)
+
 }
-
-
 
 let kitchenProducts = [
 	{
@@ -24,7 +37,11 @@ let kitchenProducts = [
 	}
 ];
 
-console.log(kitchenProducts[key])
+
+for (let key in kitchenProducts) {
+	kitchenProducts[key].option= `kitchen`;
+}
+
 
 let devicesProducts = [
 	{
@@ -44,6 +61,10 @@ let devicesProducts = [
 		price: [20,1300]
 	}
 ];
+
+for (let key in devicesProducts) {
+	devicesProducts[key].option= `devices`;
+}
 
 let cosmeticsProducts = [
 	{
@@ -68,5 +89,7 @@ let cosmeticsProducts = [
 	}
 ];
 
-
-let Products = new Product([kitchenProducts, devicesProducts, cosmeticsProducts]);
+for (let key in cosmeticsProducts) {
+	cosmeticsProducts[key].option= `cosmetics`;
+}
+let Products = new Product (kitchenProducts.concat(devicesProducts, cosmeticsProducts));

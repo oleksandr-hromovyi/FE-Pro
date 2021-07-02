@@ -4,7 +4,7 @@ c соответствующим названием ключа.
 Hello, me name is Simba 🐆. I'm Leopard cat. I can say myu-myu. 
 Если для животного не определено то, что он может сказать (например, myu-myu или gav-gav), то строка  «I can say <звук>.» не выводится.*/
 
-function Animal (name, icon, category, breed, voice) {
+function Animal (name, icon, category, breed) {
 	this.name = name;
 	this.icon = icon;
 	this.category = category;

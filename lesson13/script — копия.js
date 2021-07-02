@@ -75,9 +75,7 @@ function renderCards(data){
 	let cards = data.map(function(card){ 
 		
 			let cardTitle = card[0],
-				cardTasks = card[1];
-
-				console.log(card[0]) 
+				cardTasks = card[1]; 
 			let renderTasks = cardTasks.map(function(task, index){ 
 					
 				let typedCards = [];
