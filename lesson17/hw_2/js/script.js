@@ -1,23 +1,3 @@
-function Product (products) {
-
-document.write(`<table border = "1">
-	<tr>
-	<th>Image</th>
-	<th>Name</th>
-	<th>Price</th></tr>`)
-products.forEach (function(value, index){
-
-	document.write(`<tr>
-	<td><img src="images/${products[index].option}/${products[index].type}.svg" alt="${products[index].type}" width="50" height="50"></td>
-	<td>${products[index].type}</td>
-	${Array.isArray(products[index].price) ? `<td>${products[index].price.join('-')} USD</td>` : `<td>${products[index].price} USD</td>`}
-</tr>`)
-
-}) 
-document.write(`</table>`)
-
-}
-
 let kitchenProducts = [
 	{
 		type: 'grater',
@@ -37,12 +17,6 @@ let kitchenProducts = [
 	}
 ];
 
-
-for (let key in kitchenProducts) {
-	kitchenProducts[key].option= `kitchen`;
-}
-
-
 let devicesProducts = [
 	{
 		type: 'desktop',
@@ -61,10 +35,6 @@ let devicesProducts = [
 		price: [20,1300]
 	}
 ];
-
-for (let key in devicesProducts) {
-	devicesProducts[key].option= `devices`;
-}
 
 let cosmeticsProducts = [
 	{
@@ -89,7 +59,54 @@ let cosmeticsProducts = [
 	}
 ];
 
-for (let key in cosmeticsProducts) {
-	cosmeticsProducts[key].option= `cosmetics`;
+function Product(category, type, price){
+	this.category = category;
+	this.type = type;
+	this.price = price;
 }
-let Products = new Product (kitchenProducts.concat(devicesProducts, cosmeticsProducts));
+
+Product.prototype.render = function(){
+	return `<tr>
+		<td><img src="images/${this.category}/${this.type}.svg" alt="${this.type}" width="50" height="50"></td>
+		<td>${this.type}</td>
+		${Array.isArray(this.price) ? `<td>${this.price.join('-')} USD</td>` : `<td>${this.price} USD</td>`}
+	</tr>`;
+}
+
+let kitchenProductsProto = kitchenProducts
+	.map(function(item){
+		return new Product('kitchen', item.type, item.price);
+	})
+	.map(function(item){
+		return item.render();
+	})
+	.join('');
+
+let devicesProductsProto = devicesProducts
+	.map(function(item){
+		return new Product('devices', item.type, item.price);
+	})
+	.map(function(item){
+		return item.render();
+	})
+	.join('');
+
+let cosmeticsProductsProto = cosmeticsProducts
+	.map(function(item){
+		return new Product('cosmetics', item.type, item.price);
+	})
+	.map(function(item){
+		return item.render();
+	})
+	.join('');
+
+document.write(`<table border="1">
+	<tr>
+	<th>Image</th>
+	<th>Name</th>
+	<th>Price</th></tr>
+		${kitchenProductsProto}
+		${devicesProductsProto}
+		${cosmeticsProductsProto}
+	</table>
+`);
