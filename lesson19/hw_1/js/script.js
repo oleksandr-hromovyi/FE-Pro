@@ -17,10 +17,10 @@ class SuperMath{
     this.znak = znak;
   }
 
-  check(){
-        let answer = confirm('Do you want to do operation: ' + this.x + this.znak + this.y + ' ?');
+check(){
+    let answer = confirm('Do you want to do operation: ' + this.x + this.znak + this.y + ' ?');
     if (answer) {
-        console.log(this.mathOperation(this.x, this.y, this.znak))
+      this.mathOperation(this.x, this.y, this.znak)
     } else {
     	this.input(obj)
     }
@@ -28,15 +28,15 @@ class SuperMath{
 
 mathOperation(x,y,znak) {
   if ( znak == '+') {
-        return x + y;
+        return alert(`Result: ${x + y}`);
     } else if ( znak == '-') {
-        return x - y;
+        return alert(`Result: ${x - y}`);
     } else if ( znak == '/') {
-        return x / y;
+        return alert(`Result: ${x / y}`);
     } else if ( znak == '*') {
-        return x * y;
+        return alert(`Result: ${x * y}`);
     } else if ( znak == '%') {
-        return x % y;
+        return alert(`Result: ${x % y}`);
     } 
 }
 
