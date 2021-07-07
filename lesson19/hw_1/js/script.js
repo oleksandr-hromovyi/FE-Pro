@@ -9,80 +9,53 @@
 p = new SuperMath();
 p.check(obj); // --> no p.input() -> 3 prompt -> считает*/
 
-function SuperMath() {
-}
 
-obj = {
-    X: 12,
-    Y: 3,
-    znak: '/',
-}
+class SuperMath{
+  constructor(x,y,znak){
+    this.x = x;
+    this.y = y;
+    this.znak = znak;
+  }
 
-SuperMath.prototype.input = function(obj) {
-    alert('Input a new data');
+  check(){
+        let answer = confirm('Do you want to do operation: ' + this.x + this.znak + this.y + ' ?');
+    if (answer) {
+        console.log(this.mathOperation(this.x, this.y, this.znak))
+    } else {
+    	this.input(obj)
+    }
+  }
 
-    obj.X = +prompt('Input value of X: ', '2');
-    obj.Y = +prompt('Input value of Y: ', '2');
-    obj.znak = prompt('Input a sign of math operation for X and Y: ', '*');
-}
-
-SuperMath.prototype.inputCheck = function(obj) {
-    // let checker = false;
-    let message = '';
-    // checker = Boolean(true);
-    operations = ['+', '-', '/', '*', '%'];
-
-    do {
-        if (typeof obj.X != 'number' ||  isNaN(obj.X)) {
-            // checker = false; 
-            message = 'X must be a number.';
-            
-        } else if ( typeof obj.Y != 'number' ||  isNaN(obj.Y) ) {
-            // checker = false;
-            message = 'Y must be a number.';
-        } else if (operations.indexOf(obj.znak) == -1 ) {
-            // checker = false;
-            message = 'You wrote incorrect math operation.';
-        } else if (obj.znak == '/' && obj.Y === 0) {
-            // checker = false;
-            message = 'For making division, Y must not be equal to 0.';
-        } 
-
-        if ( message != '' ) {
-            alert(message + 'Input data again:');
-            this.input(obj);
-        }
-
-        
-    } while (message != '')
-}
-
-SuperMath.prototype.mathOperation = function(X, Y, znak) {
-    if ( znak == '+') {
-        return X + Y;
+mathOperation(x,y,znak) {
+  if ( znak == '+') {
+        return x + y;
     } else if ( znak == '-') {
-        return X - Y;
+        return x - y;
     } else if ( znak == '/') {
-        return X / Y;
+        return x / y;
     } else if ( znak == '*') {
-        return X * Y;
+        return x * y;
     } else if ( znak == '%') {
-        return X % Y;
+        return x % y;
     } 
 }
 
-SuperMath.prototype.check = function(obj) {
-    this.inputCheck(obj);
+  input(obj){
+  	let operations = ['+', '-', '/', '*', '%'];
+  	do {
+  	obj.x = +prompt(`Please, enter X`, 10);
+  } while (isNaN(obj.x))
 
-    let answer = confirm('Do you want to do operation: ' + obj.X + obj.znak + obj.Y + ' ?');
-    if (answer) {
-        console.log(obj.X + obj.znak + obj.Y + ' = ' + this.mathOperation(obj.X, obj.Y, obj.znak ))
-    } else {
-        this.input(obj);
-        this.check(obj);
-    }
+    do { 
+    obj.y = +prompt(`Please, enter Y`, 10); }
+    while (isNaN(obj.y))
+
+	do { 
+  	obj.znak = prompt(`Please enter mathematical character (+ - * / %)`, `*`); }
+ 	while (operations.indexOf(obj.znak) == -1)
+    this.check();
+  }
 }
 
-
-p = new SuperMath();
-p.check(obj);
+let obj = new SuperMath(12,3,'/');
+obj.check();
