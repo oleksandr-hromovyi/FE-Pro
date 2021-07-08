@@ -20,9 +20,9 @@ class SuperMath{
 check(){
     let answer = confirm('Do you want to do operation: ' + this.x + this.znak + this.y + ' ?');
     if (answer) {
-      this.mathOperation(this.x, this.y, this.znak)
+      return this.mathOperation(this.x, this.y, this.znak)
     } else {
-    	this.input(obj)
+      return this.input(obj)
     }
   }
 
@@ -53,7 +53,7 @@ mathOperation(x,y,znak) {
 	do { 
   	obj.znak = prompt(`Please enter mathematical character (+ - * / %)`, `*`); }
  	while (operations.indexOf(obj.znak) == -1)
-    this.check();
+    return this.check();
   }
 }
 
