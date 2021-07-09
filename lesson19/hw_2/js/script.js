@@ -18,38 +18,38 @@
 Подсказка: нужен класс Гамбургер, глобальный объект HAMBURGER (с перечнем всех его ингредиентов и характеристик) и методы для выбора опций 
 и расчета нужных величин.
 */
-
-let HAMBURGER = [
+const SIZE = [
 	{
-	item: `big`,
+	size: `big`,
 	price: 10,
 	calories: 40,
-	category: `size`
 	}, 
 	{
-	item: `small`,
+	size: `small`,
 	price: 5,
 	calories: 20,
-	category: `size`,
-	},
+	}
+]
+
+const STUFFING = [
 	{
 	item: `cheese`,
 	price: 1,
 	calories: 20,
-	category: `stuffing`
 	},
 	{
 	item: `salad`,
 	price: 2,
 	calories: 5,
-	category: `stuffing`
 	}, 
 	{
 	item: `potatoes`,
 	price: 1.5,
 	calories: 10,
-	category: `stuffing`
-	},
+	}
+	]
+
+const ADDITION = [
 	{
 	item: `flavoring`,
 	price: 1.5,
@@ -64,31 +64,192 @@ let HAMBURGER = [
 	}
 ]
 
+
+
 class Hamburger {
-	constructor (item, price, calories, category){
-		this.item = item;
-		this.price = price;
-		this.calories = calories;
-		this.category = category;
+	constructor (){
+		this.setSize();
+		this.setStuffing();
+		this.setAddition();
+		this.renderHamburger();
+		this.renderStuffing();
+		this.renderAddition();
+		this.getPrice();
+		this.getCalories();
 		
 	}
-	getOrder(){
-for (let key in HAMBURGER) 
-		if (HAMBURGER[key].item == size)
-			{
-				return (HAMBURGER[key])
-			}
+
+
+	setSize(){
+
+		let size;
+
+		do{
+			size = prompt(`Do you want big or small hamburger?`,`big`);
+		} while(size !== `big` && size !== `small`);
+
+      
+	this.size = size;
+
+	}
+
+	getSizeInfo(){
+		 let sizeInfo
+       				for(let i=0; i<SIZE.length; i++){
+					
+					if(SIZE[i].size === this.size)
+						return sizeInfo = SIZE[i];
+				}
+	}
+
+	getStuffing() {
+	let stuffingChoice = confirm(`Do you want some stuffing for your humburger?`)
+		return stuffingChoice ? this.setStuffing() : this.getAddition();
+	}
+
+	setStuffing() {
+		
+			let stuffing;
+		
+		do{
+			stuffing = prompt(`Enter by comma names of avaliable stuffing: ${this.getStuffingName()}`, this.getStuffingName()).replaceAll(' ','');
+		} while(!stuffing);
+
+		stuffing = stuffing
+			.split(`,`)
+			.filter(function(item){
+				for(let i=0; i<STUFFING.length; i++){
+					if(STUFFING[i].item === item)
+						console.log (item)
+						return item;
+				}
+			})
+			.map(function(item){
+				for(let i=0; i<STUFFING.length; i++){
+					if(STUFFING[i].item === item)
+						return STUFFING[i];
+				}
+			});
+
+		this.stuffing = stuffing;
 	} 
+		
+   	getStuffingName(){
+		return STUFFING
+			.reduce(function(arr,item){
+				arr.push(item.item);
+				return arr;
+			}, [])
+			.join(`, `);
+	}
 
+	getAddition(){
+		let additionChoice = confirm(`Do you want some addition for your humburger?`)
+		return additionChoice ? this.setAddition() : this.renderHamburger();
+	}
+
+    setAddition() {
+    	
+				let addition;
+		
+		do{
+			addition = prompt(`Enter by comma names of avaliable stuffing: ${this.getAdditionName()}`, this.getAdditionName()).replaceAll(' ','');
+		} while(!addition);
+		addition = addition
+			.split(`,`)
+			.filter(function(item){
+				for(let i=0; i<ADDITION.length; i++){
+					if(ADDITION[i].item === item)
+						console.log (item)
+						return item;
+				}
+			})
+			.map(function(item){
+				for(let i=0; i<ADDITION.length; i++){
+					if(ADDITION[i].item === item)
+						return ADDITION[i];
+				}
+			});
+
+		this.addition = addition;
+	} 
+	 
+	getAdditionName(){
+		return ADDITION
+			.reduce(function(arr,item){
+				arr.push(item.item);
+				return arr;
+			}, [])
+			.join(`, `);
+	}
+
+	renderStuffing(){
+
+	if (this.stuffing) {
+		return `with next stuffing: 
+		${this.stuffing
+			.map(function(item){
+				return `${item.item}`;
+			})
+			.join(`, `)
+		}.
+		`; }
 }
 
-let size = prompt (`Which one humburger do you want (small/big)?`);
-let stuffingChoice = confirm(`Do you want some stuffing for your humburger?`)
-if (stuffingChoice)
-{
-	let stuffing = []
+	renderAddition(){
 
+	if (this.addition) {
+		return `Your additions: ${this.addition
+			.map(function(item){
+				return `${item.item}`;
+			})
+			.join(`, `)
+		}.`;}
+	}
+
+	renderHamburger(){
+		console.log(`Your order: humburger ${this.size} size ${this.renderStuffing()}${this.renderAddition()}
+			${this.getPrice()}
+			${this.getCalories()}`)
+	}
+	getPrice(){
+		     
+			let sumOfHumburger = this.getSizeInfo().price; 
+			let sumOfStuffing = this.stuffing
+			.reduce(function(sum,item){
+				return sum+item.price;
+			}, 0);
+
+			let sumOfAddition = this.addition
+			.reduce(function(sum,item){
+				return sum+item.price;
+			}, 0);
+
+
+			let sum = sumOfHumburger + sumOfStuffing + sumOfAddition
+			return (`Total price ${sum}$`);
+		
 }
-let order = new Hamburger(size);
-console.log(order.getOrder())
+		getCalories(){
+		    let sumOfHumburger = this.getSizeInfo().calories; 
+			let sumOfStuffing = this.stuffing
+			.reduce(function(sum,item){
+				return sum+item.calories;
+			}, 0);
 
+			let sumOfAddition = this.addition
+			.reduce(function(sum,item){
+				return sum+item.calories;
+			}, 0);
+
+
+			let sum = sumOfHumburger + sumOfStuffing + sumOfAddition
+			return (`You will eat ${sum} calories`);
+		
+}
+	
+	}
+
+
+let order = new Hamburger();
+console.log(order)
