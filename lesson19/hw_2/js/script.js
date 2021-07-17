@@ -76,7 +76,6 @@ class Hamburger {
 		this.renderAddition();
 		this.getPrice();
 		this.getCalories();
-		
 	}
 
 
@@ -100,11 +99,6 @@ class Hamburger {
 					if(SIZE[i].size === this.size)
 						return sizeInfo = SIZE[i];
 				}
-	}
-
-	getStuffing() {
-	let stuffingChoice = confirm(`Do you want some stuffing for your humburger?`)
-		return stuffingChoice ? this.setStuffing() : this.getAddition();
 	}
 
 	setStuffing() {
@@ -143,12 +137,7 @@ class Hamburger {
 			.join(`, `);
 	}
 
-	getAddition(){
-		let additionChoice = confirm(`Do you want some addition for your humburger?`)
-		return additionChoice ? this.setAddition() : this.renderHamburger();
-	}
-
-    setAddition() {
+	setAddition() {
     	
 				let addition;
 		
