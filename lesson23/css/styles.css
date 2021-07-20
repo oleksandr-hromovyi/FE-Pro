@@ -6,6 +6,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+    overflow: hidden;
 
 }
 
@@ -14,7 +15,7 @@ body {
   width: 300px;
   position: absolute;
   border: 10px dotted green;
-  overflow: hidden;
+
 }
 
 #boom {

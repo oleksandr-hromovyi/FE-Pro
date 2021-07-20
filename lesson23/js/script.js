@@ -5,7 +5,7 @@ let step = 20;
 let height = 50;
 const keyboardEvents = {
  17: function () {
- 	if (innerHeight > block.offsetTop+step+block.offsetHeight+height) {
+ 	if (innerHeight >= block.offsetTop+step+block.offsetHeight) {
  		seating();
  	}
  		
@@ -126,7 +126,7 @@ function jumps() {
 function seating (){
 	seat.style.display = 'inline-block';
 	active.style.display = 'none'
-	block.style.transform = `scale(1.25, 0.4) translate(0,${active.height+height}px)`;
+	block.style.transform = `scale(1.25, 0.4) translate(0, 224px)`;
 	block.style.transition = `transform 0.5s`;
 	block.style.border = '10px dotted orange'
 
