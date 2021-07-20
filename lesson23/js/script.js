@@ -4,7 +4,17 @@ const block = document.querySelector(`.block`);
 let step = 20;
 let height = 50;
 const keyboardEvents = {
-  //17: 
+ 17: function () {
+ 	if (innerHeight > block.offsetTop+step+block.offsetHeight+height) {
+ 		seating();
+ 	}
+ 		
+ 	else {
+ 	block.style.top =`${parseInt(block.style.top)-step*2}px`
+ 	booms ();
+ 	}
+
+ },
  32: function () {
  	if (block.offsetTop-height>0) {
  		jumps();
@@ -17,7 +27,6 @@ const keyboardEvents = {
 
  },
 
- //element => element.style.left = !element.style.left ? `10px` : `${parseInt(element.style.left)+10}px`,
  37: function () {
  	if(block.style.left = !block.style.left) {
  			return block.style.left = `${block.offsetLeft-step}px`
@@ -96,9 +105,10 @@ function booms() {
 function jumps() {
     jump.style.display = 'inline-block';
     active.style.display = 'none'
+    boom.style.display = 'none'
     block.style.border = '10px dotted pink'
     block.style.transform = `translate(0, -${height}px)`;
-    block.style.transition =  `transform 1s`;
+    block.style.transition =  `transform 0.5s`;
 
 
     
@@ -106,10 +116,29 @@ function jumps() {
         jump.style.display = 'none';
         active.style.display = 'inline-block';
         block.style.border = '10px dotted green'
-        block.style.transform = `translate(0, +${height}px)`;
-        block.style.transition =  `transform 1s`;
+        block.style.transform = `translate(0, 0)`;
+        block.style.transition =  `transform 0.5s`;
   
         ;
-    },2000);
+    },1000);
 }
 
+function seating (){
+	seat.style.display = 'inline-block';
+	active.style.display = 'none'
+	block.style.transform = `scale(1.25, 0.4) translate(0,${active.height+height}px)`;
+	block.style.transition = `transform 0.5s`;
+	block.style.border = '10px dotted orange'
+
+    
+    
+    setTimeout(function(){
+	seat.style.display = 'none';
+	active.style.display = 'inline-block';
+    block.style.transform = `scale(1, 1) translate(0, 0)`;
+	block.style.transition = `transform 0.5s`; 
+	block.style.border = '10px dotted green'
+
+        
+    },1000);
+}

@@ -10,10 +10,11 @@ body {
 }
 
 .block {
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   position: absolute;
   border: 10px dotted green;
+  overflow: hidden;
 }
 
 #boom {
@@ -21,5 +22,9 @@ body {
 }
 
 #jump {
+  display: none;
+}
+
+#seat {
   display: none;
 }
