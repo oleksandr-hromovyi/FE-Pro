@@ -1,0 +1,25 @@
+body {
+  background-color: #352524;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.block {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  border: 10px dotted green;
+}
+
+#boom {
+  display: none;
+}
+
+#jump {
+  display: none;
+}

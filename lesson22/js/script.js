@@ -4,9 +4,9 @@
 Написать функцию setFirstItemClassName(level), где level - это номер уровня вложенности, в котором нужно произвести изменения. 
 Функция setFirstItemClassName должна установить первому тегу группы - класс `first-item`
 * при добавлении классов - должен измениться цвет фона на красный(first) и зеленый(last), с анимацией - задержка 2 секунды*/
+/*
 
-
-let lastLi = [...document.querySelectorAll(`li>ul>li:last-child`)]
+let lastLi = [...document.querySelectorAll(`li:last-of-type`)]
 console.dir(lastLi)
 
 lastLi.forEach((item)=>{
@@ -31,41 +31,32 @@ element.children[i].children[0].children[0].style.backgroundColor = `red`
   }, 2000);
 }
 
-/*
-
-let list = document.querySelector('.root');
-
-setFirstItemClassName(3, list);
-
-function setFirstItemClassName(level, element)
-{
-    if(level !==1 && element.children.length > 0) 
-    {
-        for(child of element.children)
-        {
-			setFirstItemClassName(level-1,child);
-		}
-    } 
-    else 
-    {
-        // first 
-        element.children[0].classList.add('first-item');
-        setBackgroundColor(element.children[0], 'red');
-
-        // last 
-        element.children[element.children.length-1].classList.add('last-item');
-        setBackgroundColor(element.children[element.children.length-1], 'green');
-    }
-}
-
-function setBackgroundColor( element, color ) 
-{
-    setTimeout(function(element, color) 
-    {
-    	console.log(element)
-        element.style.backgroundColor = color;
-    }, 2000, element, color)
-}
-
-
 */
+
+const last = [...document.querySelectorAll(`li:last-of-type`)];
+last.forEach(li => li.classList.add(`last`));
+
+let level;
+do {
+    level = +prompt(`Enter level 1-3`,2);
+} while (isNaN(level) || !level || level<1 || level>3);
+
+const root = document.querySelector(`.root`);
+
+const setFirstItemClassName = (element, level) => {
+    // level--;
+    if(level>0){
+        element.children.length && [...element.children].forEach(item => setFirstItemClassName(item,level));
+    } else{
+        element.children.length && element.children[0].classList.add(`first-item`);
+    }
+} 
+
+// setFirstItemClassName(root, level);
+
+setTimeout( setFirstItemClassName, 5000)
+
+
+
+
+
