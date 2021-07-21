@@ -4,59 +4,45 @@
 Написать функцию setFirstItemClassName(level), где level - это номер уровня вложенности, в котором нужно произвести изменения. 
 Функция setFirstItemClassName должна установить первому тегу группы - класс `first-item`
 * при добавлении классов - должен измениться цвет фона на красный(first) и зеленый(last), с анимацией - задержка 2 секунды*/
-/*
 
-let lastLi = [...document.querySelectorAll(`li:last-of-type`)]
-console.dir(lastLi)
 
-lastLi.forEach((item)=>{
-  setTimeout(function() {
-  	item.className = `last`;
-  	item.style.backgroundColor = `green`
-  }, 2000);
-
-})
-
-let list = document.querySelector('.root');
-setFirstItemClassName(3, list);
-function setFirstItemClassName (level, element)
-{
-	setTimeout(function() {
-for (i=0; i<element.children.length; i++){
-
-element.children[i].children[0].children[0].classList.add('first-item')
-element.children[i].children[0].children[0].style.backgroundColor = `red`
-
-}
-  }, 2000);
-}
-
-*/
-
-const last = [...document.querySelectorAll(`li:last-of-type`)];
-last.forEach(li => li.classList.add(`last`));
+const lastLi = [...document.querySelectorAll(`li:last-of-type`)];
+lastLi.map((li) => {
+  
+    li.className = `last`;
+    setBackgroundColor(li, `green`);
+ 
+}) 
 
 let level;
 do {
-    level = +prompt(`Enter level 1-3`,2);
-} while (isNaN(level) || !level || level<1 || level>3);
+    level = +prompt(`Enter level`,`3`);
+} while (isNaN(level) || !level);
 
-const root = document.querySelector(`.root`);
 
-const setFirstItemClassName = (element, level) => {
-    // level--;
-    if(level>0){
-        element.children.length && [...element.children].forEach(item => setFirstItemClassName(item,level));
-    } else{
-        element.children.length && element.children[0].classList.add(`first-item`);
+let list = document.querySelector('.root');
+
+setFirstItemClassName(level, list);
+
+
+function setFirstItemClassName(level, element)
+{
+    if(level !==1 && element.children.length > 0) 
+    {
+      for(child of element.children){
+        setFirstItemClassName(level-1,child);
+      }
+    } 
+    else {
+        element.children[0].classList.add('first-item');
+        setBackgroundColor(element.children[0], 'red');
     }
-} 
+}
 
-// setFirstItemClassName(root, level);
-
-setTimeout( setFirstItemClassName, 5000)
-
-
-
-
-
+function setBackgroundColor(element, color) 
+{
+    setTimeout(function(element, color) 
+    {
+        element.style.backgroundColor = color;
+    }, 2000, element, color)
+}

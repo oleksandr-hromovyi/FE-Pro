@@ -3,6 +3,7 @@ const block = document.querySelector(`.block`);
 
 let step = 20;
 let height = 50;
+
 const keyboardEvents = {
  17: function () {
  	if (innerHeight >= block.offsetTop+step+block.offsetHeight) {
@@ -96,9 +97,7 @@ function booms() {
     setTimeout(function(){
         boom.style.display = 'none';
         active.style.display = 'inline-block';
-        block.style.border = '10px dotted green'
-  
-        ;
+        block.style.border = '10px dotted green';
     },2000);
 }
 
@@ -110,16 +109,13 @@ function jumps() {
     block.style.transform = `translate(0, -${height}px)`;
     block.style.transition =  `transform 0.5s`;
 
-
-    
+ 
     setTimeout(function(){
         jump.style.display = 'none';
         active.style.display = 'inline-block';
         block.style.border = '10px dotted green'
         block.style.transform = `translate(0, 0)`;
         block.style.transition =  `transform 0.5s`;
-  
-        ;
     },1000);
 }
 
@@ -137,8 +133,7 @@ function seating (){
 	active.style.display = 'inline-block';
     block.style.transform = `scale(1, 1) translate(0, 0)`;
 	block.style.transition = `transform 0.5s`; 
-	block.style.border = '10px dotted green'
-
+	block.style.border = '10px dotted green';
         
     },1000);
 }
