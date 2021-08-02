@@ -1,0 +1,832 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getDiv"
+			],
+			[
+				"cla",
+				"classList"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"tab",
+				"tabLink"
+			],
+			[
+				"c",
+				"console"
+			],
+			[
+				"ta",
+				"tabContent"
+			],
+			[
+				"tab-",
+				"tab-link"
+			],
+			[
+				"border-botto",
+				"border-bottom-left-radius\tproperty"
+			],
+			[
+				"menu",
+				"menuRender"
+			],
+			[
+				"set",
+				"setFirstItemClassName"
+			],
+			[
+				"n",
+				"needLenght"
+			],
+			[
+				"o",
+				"offsetLeft"
+			],
+			[
+				"inline",
+				"inline-block\tdisplay"
+			],
+			[
+				"align",
+				"align-items\tproperty"
+			],
+			[
+				"re",
+				"render"
+			],
+			[
+				"s",
+				"studentsScoreArr"
+			],
+			[
+				"stu",
+				"studentsScore"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"last",
+				"lastLi"
+			],
+			[
+				"a",
+				"avaliableStuffing"
+			],
+			[
+				"cos",
+				"corses"
+			],
+			[
+				"co",
+				"corses"
+			],
+			[
+				"new",
+				"newRole"
+			],
+			[
+				"A",
+				"Admin"
+			],
+			[
+				"g",
+				"gradation"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"ro",
+				"roles"
+			],
+			[
+				"p",
+				"price"
+			],
+			[
+				"y",
+				"You"
+			],
+			[
+				"or",
+				"orderList"
+			],
+			[
+				"HU",
+				"HAMBURGER"
+			],
+			[
+				"v",
+				"voice"
+			],
+			[
+				"kitchen",
+				"kitchenProducts"
+			],
+			[
+				"pr",
+				"Products"
+			],
+			[
+				"pro",
+				"Products"
+			],
+			[
+				"price",
+				"priceTD"
+			],
+			[
+				"kitc",
+				"kitchenProducts"
+			],
+			[
+				"con",
+				"concat"
+			],
+			[
+				"P",
+				"Product"
+			],
+			[
+				"Pr",
+				"Products"
+			],
+			[
+				"Pro",
+				"Products"
+			],
+			[
+				"l",
+				"linkName"
+			],
+			[
+				"ty",
+				"typedCards"
+			],
+			[
+				"render",
+				"renderTasks"
+			],
+			[
+				"ren",
+				"renderlist"
+			],
+			[
+				"ph",
+				"photoWithHeading"
+			],
+			[
+				"j",
+				"j"
+			],
+			[
+				"rend",
+				"render1"
+			],
+			[
+				"e",
+				"example"
+			],
+			[
+				"getLi",
+				"getlist"
+			],
+			[
+				"sec",
+				"section"
+			],
+			[
+				"renderSe",
+				"renderSection"
+			],
+			[
+				"t",
+				"tempArr"
+			],
+			[
+				"pa",
+				"planeSeats"
+			],
+			[
+				"busine",
+				"businessPlaces"
+			],
+			[
+				"buss",
+				"bussinessPlaces"
+			],
+			[
+				"business",
+				"businessRow"
+			],
+			[
+				"ge",
+				"generatePlane"
+			],
+			[
+				"genera",
+				"generatePlaces"
+			],
+			[
+				"in",
+				"index"
+			],
+			[
+				"red",
+				"redTeam"
+			],
+			[
+				"flex-",
+				"flex-grow\tproperty"
+			],
+			[
+				"flex",
+				"flex-grow\tproperty"
+			],
+			[
+				"min",
+				"min-height\tproperty"
+			],
+			[
+				"ali",
+				"align-content\tproperty"
+			],
+			[
+				"d",
+				"div"
+			],
+			[
+				"spa",
+				"space-around\tjustify-content"
+			],
+			[
+				"w",
+				"winner"
+			],
+			[
+				"ba",
+				"background-color\tproperty"
+			],
+			[
+				"Aas",
+				"Asia"
+			],
+			[
+				"win",
+				"winnerContinent"
+			],
+			[
+				"wi",
+				"winner"
+			],
+			[
+				"spo",
+				"sports"
+			],
+			[
+				"winner",
+				"winnercontinent"
+			],
+			[
+				"ol",
+				"olimpic"
+			],
+			[
+				"Fu",
+				"functionA"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"function",
+				"function"
+			],
+			[
+				"conti",
+				"continents"
+			],
+			[
+				"type",
+				"typeOfSportsTD"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"copy",
+				"copyList"
+			],
+			[
+				"final",
+				"finalResult"
+			],
+			[
+				"fu",
+				"functionA"
+			],
+			[
+				"funct",
+				"functionA"
+			],
+			[
+				"ran",
+				"rank"
+			],
+			[
+				"rank",
+				"rankArr"
+			],
+			[
+				"card",
+				"cardInfoResult"
+			],
+			[
+				"ca",
+				"cardInfoResult"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"padd",
+				"padding-left\tproperty"
+			],
+			[
+				"space",
+				"space-between\tjustify-content"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"hei",
+				"height\tproperty"
+			],
+			[
+				"paddin",
+				"padding\tproperty"
+			],
+			[
+				"I",
+				"Ivan"
+			],
+			[
+				"inde",
+				"indexMin"
+			],
+			[
+				"index",
+				"indexMin"
+			],
+			[
+				"fir",
+				"firstArr"
+			],
+			[
+				"operan",
+				"operand"
+			],
+			[
+				"oper",
+				"operand"
+			],
+			[
+				"ope",
+				"operand"
+			],
+			[
+				"operands",
+				"operandsAmount"
+			],
+			[
+				"op",
+				"operand"
+			],
+			[
+				"Nick",
+				"nickName"
+			],
+			[
+				"bac",
+				"background-color\tproperty"
+			],
+			[
+				"max",
+				"max-width\tproperty"
+			],
+			[
+				"margin",
+				"margin-bottom\tproperty"
+			],
+			[
+				"grid-t",
+				"grid-template-columns\tproperty"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"tex",
+				"text-align\tproperty"
+			],
+			[
+				"border",
+				"border-radius\tproperty"
+			],
+			[
+				"form-",
+				"form-control"
+			],
+			[
+				"me",
+				"meta\tTag"
+			],
+			[
+				"heih",
+				"max-height\tproperty"
+			],
+			[
+				"mar",
+				"margin\tproperty"
+			],
+			[
+				"IN",
+				"inline-block\tdisplay"
+			],
+			[
+				"te",
+				"text-align\tproperty"
+			],
+			[
+				"web-",
+				"web-name"
+			],
+			[
+				"margin-",
+				"margin-left\tproperty"
+			],
+			[
+				"paddi",
+				"padding-bottom\tproperty"
+			],
+			[
+				"marg",
+				"margin-right\tproperty"
+			],
+			[
+				"fo",
+				"footer\tTag"
+			],
+			[
+				"al",
+				"align-items\tproperty"
+			],
+			[
+				"r",
+				"rgba()\tbackground"
+			],
+			[
+				"pad",
+				"padding\tproperty"
+			],
+			[
+				"margi",
+				"margin-bottom\tproperty"
+			],
+			[
+				"mRG",
+				"margin-top\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: In",
+				"Package Control: Install Package"
+			],
+			[
+				"server",
+				"Set Syntax: Java Server Page (JSP)"
+			],
+			[
+				"Server",
+				"Set Syntax: Java Server Page (JSP)"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Install Package Control",
+				"Package Control: Install Package"
+			],
+			[
+				"emmet",
+				"Emmet: Expand Abbreviation"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Hillel/FE-Pro/lesson26/js/script.js",
+		"/D/Загрузки/24.0/24.0/js/script.js",
+		"/D/Hillel/FE-Pro/lesson26/index.html",
+		"/D/Hillel/FE-Pro/lesson24/index.html",
+		"/D/Hillel/FE-Pro/lesson26/data2.json",
+		"/D/Hillel/FE-Pro/lesson26/data.json",
+		"/D/Hillel/FE-Pro/lesson24/css/styles.css",
+		"/D/Hillel/FE-Pro/lesson24/js/script.js",
+		"/D/Hillel/FE-Pro/lesson23/js/script.js",
+		"/D/Загрузки/markup0 (2)/markup0/index.html",
+		"/D/Загрузки/markup0 (2)/markup0/js/main.js",
+		"/D/Загрузки/markup0 (2)/markup0/css/style.css",
+		"/D/Загрузки/22.0/22.0/index.html",
+		"/D/Загрузки/22.0/22.0/script.js",
+		"/D/Hillel/FE-Pro/lesson20/js/script.js",
+		"/D/Hillel/FE-Pro/lesson22/js/script.js",
+		"/D/Загрузки/main (5).js",
+		"/D/Hillel/FE-Pro/lesson23/index.html",
+		"/D/Hillel/FE-Pro/lesson23/css/styles.css",
+		"/D/Загрузки/hamburger.js",
+		"/D/Загрузки/19.0/19.0/script.js",
+		"/D/Загрузки/20.0/20.0/script.js",
+		"/D/Загрузки/21.0/21.0/script.js",
+		"/D/Загрузки/20.0/20.0/index.html",
+		"/D/Hillel/FE-Pro/lesson20/index.html",
+		"/D/Hillel/FE-Pro/lesson22/index.html",
+		"/D/Загрузки/main (4).js",
+		"/D/Hillel/FE-Pro/lesson20/js/script1.js",
+		"/D/Hillel/FE-Pro/lesson20/js/script2.js",
+		"/D/Hillel/FE-Pro/lesson20/js/main.js",
+		"/D/Hillel/FE-Pro/lesson22/js/main.js",
+		"/D/Hillel/FE-Pro/lesson20/index оригинал.html",
+		"/D/Hillel/FE-Pro/lesson20/css/styles.css",
+		"/D/Загрузки/17.0/script.js",
+		"/D/Hillel/FE-Pro/lesson19/hw_2/js/script.js",
+		"/D/Загрузки/18.0/18.0/script.js",
+		"/D/Загрузки/18.0/18.0/index.html",
+		"/D/Загрузки/script (1).js",
+		"/D/Загрузки/Новая папка/test.js",
+		"/D/Hillel/FE-Pro/lesson13/script.js",
+		"/D/Загрузки/test.js",
+		"/D/Загрузки/18.0/18.0/user.js",
+		"/D/Загрузки/Новая папка/index.html",
+		"/D/Загрузки/Новая папка/style.css",
+		"/D/Hillel/FE-Pro/lesson20/index — копия.html",
+		"/D/Hillel/FE-Pro/lesson20/data.json",
+		"/D/Hillel/FE-Pro/lesson20/css/styles.sass",
+		"/D/Hillel/FE-Pro/lesson20/css/styles.css.map",
+		"/D/Hillel/FE-Pro/lesson19/hw_1/index.html",
+		"/D/Hillel/FE-Pro/lesson19/hw_1/js/script.js",
+		"/D/Загрузки/18.0/18.0/pizza.js",
+		"/D/Загрузки/10.0 (1)/10.0/script.js",
+		"/D/Загрузки/main (3).js",
+		"/D/Загрузки/main (2).js",
+		"/D/Hillel/FE-Pro/lesson17/hw_2/js/script.js",
+		"/D/Hillel/FE-Pro/lesson19/hw_2/index.html",
+		"/D/Загрузки/16.0/script.js",
+		"/D/Hillel/FE-Pro/lesson17/hw_1/js/script.js",
+		"/D/Загрузки/main (1).js",
+		"/D/Hillel/FE-Pro/lesson15/hw_1/js/script.js",
+		"/D/Hillel/FE-Pro/lesson17/hw_2/index.html",
+		"/D/Hillel/FE-Pro/lesson17/hw_1/index.html",
+		"/D/Загрузки/trello/trello/index.html",
+		"/D/Загрузки/trello/trello/script.js",
+		"/D/Загрузки/trello/trello/Новая папка/script.js",
+		"/D/Hillel/FE-Pro/lesson15/hw_1/index.html",
+		"/D/Загрузки/trello/trello/images/script.js",
+		"/D/Загрузки/main.js",
+		"/D/Загрузки/script.js",
+		"/D/Загрузки/12.0 (1)/12.0/script.js",
+		"/D/Hillel/FE-Pro/lesson14/hw_3/js/script.js",
+		"/D/Hillel/FE-Pro/lesson11/hw_1/js/script.js",
+		"/D/Hillel/FE-Pro/lesson14/hw_2/js/script.js",
+		"/D/Hillel/FE-Pro/lesson14/hw_3/index.html",
+		"/D/Hillel/FE-Pro/lesson14/hw_1/js/script.js",
+		"/D/Hillel/FE-Pro/lesson14/hw_1/index.html",
+		"/D/Загрузки/11.0/11.0/script.js",
+		"/D/Hillel/FE-Pro/lesson12/hw_2/js/script.js",
+		"/D/Загрузки/12.0 (2)/12.0/script.js",
+		"/D/Загрузки/12.0 (1)/12.0/index.html",
+		"/D/Загрузки/12.0 (1)/12.0/styles/style.css",
+		"/D/Загрузки/12.0 (1)/12.0/js/script.js",
+		"/D/Hillel/FE-Pro/lesson12/hw_1/js/script.js",
+		"/D/Hillel/FE-Pro/lesson12/hw_2/index.html",
+		"/D/Hillel/FE-Pro/lesson11/hw_1/index.html",
+		"/D/Hillel/FE-Pro/lesson12/hw_1/index.html",
+		"/D/Hillel/FE-Pro/lesson10/hw_3/js/script.js",
+		"/D/Hillel/Homework/team-project/markup/index.html",
+		"/D/Загрузки/flags.js",
+		"/D/Hillel/FE-Pro/lesson10/hw_2/js/script.js",
+		"/D/Загрузки/10.0/10.0/script.js",
+		"/D/Hillel/FE-Pro/lesson10/hw_1/js/script.js",
+		"/D/Загрузки/9.0/9.0/script.js",
+		"/D/Загрузки/8.0 (1)/8.0/script.js",
+		"/D/Загрузки/8.0 (1)/8.0/index.html",
+		"/D/Hillel/FE-Pro/lesson7/hw_1/js/script.js",
+		"/C/Users/User/AppData/Local/Temp/Rar$DIa9124.30067/style.css",
+		"/D/9.0/script.js",
+		"/D/Hillel/FE-Pro/lesson10/index.html",
+		"/D/Hillel/FE-Pro/lesson10/js/script.js",
+		"/D/Загрузки/main.js (1)/__MACOSX/._main.js",
+		"/D/Hillel/FE-Pro/lesson7/hw_2/js/script.js",
+		"/D/Hillel/FE-Pro/lesson8/index.html",
+		"/D/Загрузки/8.0/8.0/script.js",
+		"/D/Hillel/FE-Pro/lesson8/js/script.js",
+		"/D/Hillel/FE-Pro/lesson7/hw_1/index.html",
+		"/D/Загрузки/markup (8)/markup/index.html",
+		"/D/Загрузки/markup (8)/markup/images/jack.svg",
+		"/D/Загрузки/markup (8)/markup/css/style.css",
+		"/D/Hillel/FE-Pro/lesson8/practice/index.html",
+		"/D/Hillel/FE-Pro/lesson8/hw_1/js/script.js",
+		"/D/Hillel/FE-Pro/lesson8/hw_1/index.html",
+		"/D/Hillel/FE-Pro/lesson7/hw_2/index.html",
+		"/D/Загрузки/7.0/7.0/script.js",
+		"/D/Hillel/FE-Pro/lesson7/hw_1/css/style.css",
+		"/D/Hillel/FE-Pro/lesson6/hw_1_4/js/script.js",
+		"/D/Hillel/FE-Pro/lesson6 — копия/hw_1_4/js/script.js",
+		"/D/Hillel/FE-Pro/lesson6 — копия/hw_1_1/js/script.js",
+		"/D/Hillel/FE-Pro/lesson6 — копия/hw_1_3/js/script.js",
+		"/D/Hillel/FE-Pro/lesson6 — копия/hw_1_2/js/script.js",
+		"/D/Hillel/FE-Pro/lesson6/hw_1_1/js/script.js",
+		"/D/Hillel/FE-Pro/lesson6/hw_1_2/js/script.js",
+		"/D/Hillel/FE-Pro/lesson6/hw_1_3/js/script.js",
+		"/D/Hillel/FE-Pro/lesson4/hw_2/js/script.js",
+		"/D/Hillel/FE-Pro/lesson4/hw_1/js/script.js",
+		"/D/Hillel/FE-Pro/lesson6/hw_1/js/script.js",
+		"/D/Hillel/FE-Pro/lesson5/hw_1/js/script.js",
+		"/D/Загрузки/6.0/6.0/script.js"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 122.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
