@@ -1,0 +1,328 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  font-family: 'Roboto', sans-serif;
+  vertical-align: baseline; }
+
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  min-height: 100vh;
+  height: auto;
+}
+
+.main {
+  padding: 40px;
+  padding-left: 100px;
+  flex-basis: 60%; 
+}
+
+.aside__favourite-jokes {
+  padding: 40px;
+  flex-basis: 40%;
+}
+
+.main__logo {
+  font-size: 20px;
+  line-height: 28px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 78px;
+}
+
+.main__welcome-text {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.main__description {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 44px;
+  color: #333;
+  margin-bottom: 43px;
+}
+
+.aside__favourite-jokes {
+	background-color: #F8F8F8;
+}
+
+.aside__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ABABAB;
+}
+
+.getJokesForm {
+	display: flex;
+	font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+
+.main__btn {
+	padding: 5px;
+	margin: 20px 0;
+  background: linear-gradient(90.55deg, #8EA7FF 0%, #7291FF 100%);
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  cursor: pointer;
+  height: 42px;
+  width: 152px;
+}
+
+.main__placeholder {
+	max-width: 680px;
+  padding: 10px 15px;
+  margin-top: 20px;
+  border: 2px solid #333333;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ABABAB;
+  outline: none;
+}
+
+.main__joke-block {
+	max-width: 680px;
+  height: auto;
+  background: #F8F8F8;
+  border-radius: 20px;
+  padding: 15px 0;
+  margin-top: 20px;
+  position: relative;
+}
+
+.joke__img {
+	height: 40px;
+	width: 40px;
+	border-radius: 20px;
+	background-color: #fff;
+	flex-shrink: 0;
+	}
+
+.joke__content {
+	display: flex;
+	justify-content: flex-start;
+	margin: auto 15px;
+}
+
+.joke__img svg,  .joke__imgFav svg{
+	position: relative;
+  left: 25%;
+  top:30%;
+}
+
+.joke__id {
+	font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  color: #ABABAB;
+  margin-left: 20px;
+}
+
+.joke__href {
+	font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+	color: #8EA7FF;
+	margin-right: 5px;
+}
+
+.joke__block-text {
+	font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  color: #333333;
+  margin: 5px 40px 28px 20px;
+}
+
+.joke__block-data {
+	font-size: 10px;
+  line-height: 14px;
+  color: #ABABAB;
+  margin-left: 20px;
+}
+
+.joke__like-icon {
+  position: absolute;
+  left: -100vw;
+}
+
+.joke__like-icon  {
+  color: #f5cfcf;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+ .joke__category {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+}
+
+#jokeContainer {
+  position: relative;
+}
+
+.main__joke-block > label  {
+position: absolute;
+    z-index: 1;
+    top: 25px;
+    right: 25px;
+}
+
+
+.joke__category {
+  background-color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: sub;
+  padding: 5px 30px;
+}
+
+label[data-icon="heart"] {
+  color: #fac8c8;
+}
+
+label[data-icon="heart"]:hover {
+  color: #f79292;
+}
+
+.joke__like-icon:checked + label {
+  color: #FF6767;
+   animation: joke__like-icon 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+
+.switch-field {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  max-width: 680px;
+}
+
+.switch-field input {
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  border: 0;
+  overflow: hidden;
+}
+
+.switch-field label {
+  font-weight: 500;
+font-size: 12px;
+  min-width: 80px;
+height: 28px;
+  border: 2px solid #ABABAB;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #ABABAB;
+  margin: 5px;
+  text-align: center;
+  padding: 6px 15px;
+  
+}
+.getJokes-form-categoriesList {
+  display: none;
+}
+.getJokes-form-categoriesList.show {
+  display: block;
+}
+
+.main__placeholder {
+  display: none;
+}
+
+.main__placeholder.show {
+  display: block;
+}
+.getJokes-form-categoriesList  li {
+  padding-top: 10px;
+}
+
+.switch-field label:hover {
+  cursor: pointer;
+}
+
+.switch-field input:checked + label {
+  background-color: #F8F8F8;
+  color:#333;
+  box-shadow: none;
+}
+
+.switch-field label{
+  border-radius: 6px;
+}
+
+#jokeContainerFav > .main__joke-block {
+  background-color: #fff;
+  min-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  padding-bottom: 10px; 
+  margin-top: 40px;
+}
+
+#jokeContainerFav > .main__joke-block > .joke__content > .joke__img {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: #F8F8F8;
+  flex-shrink: 0;
+}
+
+#jokeContainerFav > .main__joke-block > .joke__content > .joke__block-content >.joke__category {
+   display: none;
+}
