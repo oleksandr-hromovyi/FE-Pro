@@ -36,7 +36,7 @@ let form = document.querySelector(`#formJoke`),
     e.preventDefault();
   
     let category = form.querySelector('input[name="jokeCategory"]:checked').value;
-    //console.log(category)
+    console.log(category)
 
     if (category === 'random') {
         getJoke (`${DOMAIN}/jokes/random`);

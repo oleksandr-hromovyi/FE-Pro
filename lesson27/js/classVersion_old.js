@@ -70,7 +70,7 @@ let form = document.querySelector(`#formJoke`),
 
 	formSubmit = () => {
 		let category = form.querySelector('input[name="jokeCategory"]:checked').value;
-    	console.log(category)
+    	//console.log(category)
 
 	    if (category === 'random') {
 	        this.getJoke (`${DOMAIN}/jokes/random`);
@@ -112,17 +112,7 @@ let form = document.querySelector(`#formJoke`),
                 //console.log(localJokes);
                   let indexFavJoke = localJokes.findIndex(localJoke => localJoke.id === jokeData.id);
                 if(checked) {
-                  localJokes.splice(indexFavJoke, 1);
-                  
-                  let labelID = inputFavIcon.getAttribute(`for`),
-
-                    currentJoke = jokeContainer.querySelector(`label[for="${labelID}"]`);
- console.log(labelID);
- console.log(currentJoke)
-
-                    if(currentJoke)
-                        currentJoke.previousElementSibling.checked = false;
-
+                  localJokes.splice(indexFavJoke, 1) 
                 } else {
                 let jokeExist = localJokes.find(localJoke => localJoke.id === jokeData.id);
                 !jokeExist && localJokes.push(jokeData) && this.setLocalJokes(localJokes);
