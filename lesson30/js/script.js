@@ -32,14 +32,14 @@ let availiableUserCurrency = [],
     availiableBankCurrency = [],
     availiableCurrencyForWithdraw = [];
 
-    let userDataLength =0;
+    let userDataLength = 0;
 	for (let key in userData) {
 				availiableUserCurrency.push(key)
 				userDataLength++;
 		}
-	console.log(userDataLength)
+	//console.log(userDataLength)
 
-	let bankDataLength =0;
+	let bankDataLength = 0;
 	for (let key in bankData) {
 				if (bankData[key].max > 0 ) {
 				availiableBankCurrency.push(key)
@@ -67,7 +67,7 @@ const getMoney = (userData, bankData) => {
 	return new Promise((resolve, reject) => {
 
 let balance = confirm(`Проверить баланс на карте?`);
-balance ? resolve (userData) :  reject({userData: userData, bankData: bankData});
+balance ? resolve (userData) : reject({userData: userData, bankData: bankData});
 })
 }
 
@@ -82,7 +82,7 @@ getMoney(userData, bankData).then (
 	error => {
 		let checkCurrencyType
 		do {
-			 checkCurrencyType = prompt(`Введите название валюты в формате ${availiableCurrencyForWithdraw.join(', ')}`)
+			 checkCurrencyType = prompt(`Введите название валюты, которую хотите снять, в формате ${availiableCurrencyForWithdraw.join(', ')}`)
 		} while (availiableCurrencyForWithdraw.indexOf(checkCurrencyType) === -1)
 		return Promise.reject(checkCurrencyType);
 
@@ -91,7 +91,7 @@ getMoney(userData, bankData).then (
 .then(
 	 data => console.log(`Баланс составляет: ${userData[data]} ${data}`),
 	 currency => { 
-console.log(userData[currency])
+//console.log(userData[currency])
 	 	do {
 	 	checkCurrencyAmount = +prompt(`Введите необходимую сумму`);
 			if (bankData[currency].min > checkCurrencyAmount) {
