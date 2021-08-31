@@ -75,8 +75,21 @@ const checkFav = e => {
 const renderTable = () => {
 	controller(URL, `GET`)
 		.then(
-			data => data.map(data => renderHero(data))
-			);
+
+			data => {
+				let unique = {}
+				let filteredHeroes = data.filter(function(x) {
+  if (unique[x.name]) return false;
+  unique[x.name] = true;
+    return true;
+})
+
+filteredHeroes.forEach (function (value){
+	renderHero(value);
+})
+
+		})
+		
 }
 
 console.log(heroesForm);
